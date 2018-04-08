@@ -7,15 +7,15 @@ import sys
 
 
 if sys.version_info[0] >= 3:
-	print('Python 3 specific definitions')
+    print('Python 3 specific definitions')
 else:
-	print('Python 2 specific definitions')
+    print('Python 2 specific definitions')
 
 
 if sys.platform == 'win32':
-	print('Windows specific definitions')
+    print('Windows specific definitions')
 else:
-	print('Posix specific definitions')
+    print('Posix specific definitions')
 
 
 
