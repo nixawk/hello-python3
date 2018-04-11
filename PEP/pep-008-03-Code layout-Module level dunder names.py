@@ -49,6 +49,7 @@ def myfunc():
 if __name__ == '__main__':
     MYCLS = MyClass('Python')
     MYCLS.dowhat()
+    MyClass.greeting()
 
 # https://www.python.org/dev/peps/pep-0008/#module-level-dunder-names
 # https://www.python.org/dev/peps/pep-0401/
