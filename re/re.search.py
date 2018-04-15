@@ -14,8 +14,19 @@ re.search(pattern, string, flags=0)
 import re
 
 
-pattern = '^(.*)'
-s = 'hello\nworld'
+greeting = "hello, world"
 
-regex = re.compile(pattern)
-print(regex.search(s).groups())
+result = re.search(r"[aeiou]", greeting)
+if result.group():
+    print("regex")
+
+if ("a" in greeting
+    or "e" in greeting
+    or "i" in greeting
+    or "o" in greeting
+    or "u" in greeting):
+    # simlar to re.search
+    print("in")
+
+
+# http://pyvideo.org/pycon-us-2017/readable-regular-expressions.html
