@@ -29,7 +29,7 @@ class range(start, stop[, step])
 
 
 def split_by_length(string, split_length):
-    assert isinstance(string, str)
+    assert isinstance(string, str) and isinstance(split_length, int)
     for _ in range(0, len(string), split_length):
         yield string[_: _ + split_length]
 
