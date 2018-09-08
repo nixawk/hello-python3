@@ -24,9 +24,16 @@ Construct an immutable array of bytes from:
 
 """
 
-s = bytes('ß', 'utf-8')
-print(s.decode('utf-8'))
+def bytes_object():
+    print(bytes([1, 2, 3, 4]))                          # b'\x01\x02\x03\x04'
+    print(bytes("hello россия", encoding="utf-8"))      # b'hello \xd1\x80\xd0\xbe\xd1\x81\xd1\x81\xd0\xb8\xd1\x8f'
+    print(bytes([0x50, 0x79, 0x74, 0x68, 0x6F, 0x6E]))  # b'Python'
+    print(bytes(4))                                     # b'\x00\x00\x00\x00'
 
-print(bytes([0x50, 0x79, 0x74, 0x68, 0x6F, 0x6E]))
 
-print(bytes(4))  # 4 bytes 00 00 00 00
+if __name__ == '__main__':
+    bytes_object()
+
+# references
+# https://docs.python.org/3.7/library/stdtypes.html#bytes
+# https://docs.python.org/3.7/library/stdtypes.html#bytearray-objects

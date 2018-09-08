@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 """
@@ -9,8 +9,25 @@ The string must contain two hexadecimal digits per byte, with ASCII spaces being
 ignored.
 """
 
-s1 = '507974686F6E'
-s2 = '50 79 74 68 6F 6E'
 
-print(bytes.fromhex(s1))
-print(bytes.fromhex(s2))
+def bytes_fromhex():
+    data = [
+        '507974686F6E',
+        '50 79 74686F6E',
+        '50 79 74 68 6F 6E'
+    ]
+
+    for _ in data:
+        print(bytes.fromhex(_))
+
+    # import binascii
+    # binascii.unhexilify(s1)
+    # binascii.unhexilify(s2)
+
+
+if __name__ == '__main__':
+    bytes_fromhex()
+
+
+# references
+# https://docs.python.org/3.7/library/stdtypes.html#bytes.fromhex
