@@ -55,6 +55,13 @@ last_node: boolean indicating whether the processed node is the last one
 import hashlib
 
 
+def hashlib_blake2b_const():
+    print(hashlib.blake2b.MAX_DIGEST_SIZE)  # 64
+    print(hashlib.blake2b.MAX_KEY_SIZE)     # 64
+    print(hashlib.blake2b.SALT_SIZE)        # 16
+    print(hashlib.blake2b.PERSON_SIZE)      # 16
+
+
 def hashlib_blake2b():
     data = "helloworld"
     print(hashlib.blake2b(data.encode()).hexdigest())
@@ -81,6 +88,7 @@ def hashlib_blake2b():
 
 
 if __name__ == '__main__':
+    hashlib_blake2b_const()
     hashlib_blake2b()
 
 # references
