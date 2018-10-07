@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import json
-from flask import Flask
+from flask import (
+    Flask,
+    json
+)
 
 
 app = Flask(__name__)
