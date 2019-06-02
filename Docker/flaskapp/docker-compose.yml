@@ -1,0 +1,9 @@
+flaskapp:
+  build: .
+  ports:
+          - "9090:9090"
+  volumes:
+    - ./app:/app
+
+# https://docs.docker.com/compose/reference/ 
+
