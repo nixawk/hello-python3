@@ -10,7 +10,9 @@ if __name__ == '__main__':
 
     print(cfg.get('log', 'debug'))
     print(cfg.get('server', 'port'))
-
+    
+    cfg.set('server', 'port', "80")  # TypeError: option values must be strings
+    print(cfg.get('server', 'port'))
 
 """
 configparser.NoSectionError
